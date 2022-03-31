@@ -22,6 +22,12 @@ class PasienController extends Controller
         return view('pasien.index', compact('pasien'));
     }
 
+    public function admin()
+    {
+        $pasien = Pasien::all();
+        return view('admin.data-pasien', compact('pasien'));
+    }
+
     public function create()
     {
         $spesialis = Spesialis::all();
@@ -77,8 +83,8 @@ class PasienController extends Controller
         $pasien->umur = $request->umur;
         $pasien->id_spesialis = $request->id_spesialis;
         $pasien->penyakit = $request->penyakit;
-        $pasien->detail_perawatan = '';
-        $pasien->status = '';
+        $pasien->detail_perawatan = '-';
+        $pasien->status = 'Belum di Proses';
         $pasien->save();
 
         Alert::success('Berhasil', 'Berhasil Mendaftarkan Pasien');
@@ -136,5 +142,12 @@ class PasienController extends Controller
         $dokter = Dokter::with('spesialis')->get();
         $dokter = Dokter::with('user')->get();
         return view('pasien.dokter', compact('dokter'));
+    }
+
+    public function destroy($id)
+    {
+        $pasien = Pasien::findOrFail($id);
+        $pasien->delete();
+        return redirect('administrator/data-pasien');
     }
 }

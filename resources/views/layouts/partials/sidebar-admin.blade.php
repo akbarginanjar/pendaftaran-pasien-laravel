@@ -17,6 +17,11 @@
                                 class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a>
                     </li>
                 @endrole
+                @role('admin')
+                    <li> <a class="waves-effect waves-dark" href="/administrator/data-pasien" aria-expanded="false"><i
+                                class="fa fa-table"></i><span class="hide-menu">Data Pasien</span></a>
+                    </li>
+                @endrole
                 @role('dokter')
                     <li> <a class="waves-effect waves-dark" href="/dokter/daftar-pasien" aria-expanded="false"><i
                                 class="fa fa-user-circle-o"></i><span class="hide-menu">Data Pasien</span></a>

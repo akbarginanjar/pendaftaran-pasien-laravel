@@ -23,16 +23,21 @@
 
         <nav id="navbar" class="navbar order-last order-lg-0">
             <ul>
-                <li><a class="{{ Request::is('/')? "active":"" }} nav-link scrollto" href="/">Home</a></li>
-                <li><a class="{{ Request::is('pasien/create')? "active":"" }} nav-link scrollto" href="{{ route('pasien.create') }}">Pendaftaran Pasien</a></li>
-                <li><a class="{{ Request::is('cek')? "active":"" }} nav-link scrollto" href="/cek">Cek Token Pasien</a></li>
-                <li><a class="{{ Request::is('data-dokter')? "active":"" }} nav-link scrollto" href="/data-dokter">Dokter</a></li>
-                <li><a class="{{ Request::is('contact')? "active":"" }} nav-link scrollto" href="/contact">Contact</a></li>
+                <li><a class="{{ Request::is('/') ? 'active' : '' }} nav-link scrollto" href="/">Home</a></li>
+                <li><a class="{{ Request::is('pendaftaran') ? 'active' : '' }} nav-link scrollto"
+                        href="/pendaftaran">Pendaftaran Pasien</a></li>
+                <li><a class="{{ Request::is('cek') ? 'active' : '' }} nav-link scrollto" href="/cek">Cek Token
+                        Pasien</a></li>
+                <li><a class="{{ Request::is('data-dokter') ? 'active' : '' }} nav-link scrollto"
+                        href="/data-dokter">Dokter</a></li>
+                <li><a class="{{ Request::is('contact') ? 'active' : '' }} nav-link scrollto"
+                        href="/contact">Contact</a>
+                </li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
 
-        <a href="/login" class="appointment-btn scrollto">Login Admin</a>
+        {{-- <a href="/login" class="appointment-btn scrollto">Login Admin</a> --}}
 
     </div>
 </header><!-- End Header -->

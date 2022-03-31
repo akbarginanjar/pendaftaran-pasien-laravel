@@ -50,7 +50,11 @@
                                         <td>{{ $data->nama_pasien }}</td>
                                         <td>{{ $data->detail_perawatan }}</td>
                                         <td>
-                                            <p class="btn btn-success btn-sm">{{ $data->status }}</p>
+                                            @if ($data->status == 'sudah di proses')
+                                                <p class="btn btn-success btn-sm">{{ $data->status }}</p>
+                                            @else
+                                                <p class="btn btn-danger btn-sm">{{ $data->status }}</p>
+                                            @endif
                                         </td>
                                     </tr>
                                 @endforeach

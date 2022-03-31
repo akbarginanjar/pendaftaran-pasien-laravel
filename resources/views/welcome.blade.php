@@ -1,13 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
         <div class="container">
             <h1>Selamat Datang</h1>
             <h2>Rumah sakit umum daerah Bandung Provinsi Jawa Barat Rumah Sakit Terbaik</h2>
-            <a href="{{ route('pasien.create') }}" class="btn-get-started scrollto">Pendaftaran Pasien Online</a>
+            <a href="/pendaftaran" class="btn-get-started scrollto">Pendaftaran Pasien Online</a>
         </div>
     </section><!-- End Hero -->
 
@@ -358,5 +357,4 @@
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
-
 @endsection

@@ -49,7 +49,7 @@ class DokterController extends Controller
             $dokter->foto = $name;
         }
         $dokter->save();
-        return view('admin.dokter.index');
+        return redirect('administrator/data-dokter');
     }
 
     public function destroy(Dokter $dokter, $id)

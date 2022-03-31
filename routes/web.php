@@ -36,7 +36,13 @@ Route::get('/cek', function() {
 });
 Route::post('/token', [PasienController::class, 'token']);
 
+Route::get('/gagal', function() {
+    return view('pasien.gagal');
+});
+
 Route::resource('pasien', PasienController::class);
+
+Route::get('/pendaftaran', [PasienController::class, 'create']);
 
 Route::resource('contact', ContactController::class);
 
@@ -54,6 +60,7 @@ Route::group(['prefix' => 'administrator', 'middleware' => ['auth', 'role:admin'
 
         Route::resource('data-dokter', DokterController::class);
 
+        Route::get('data-pasien', [PasienController::class, 'admin']);
     });
 
 

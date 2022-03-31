@@ -10,7 +10,10 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
+
     <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
+    <link rel="stylesheet" href="sweetalert.css">
+    <script src="sweetalert.js"></script>
     <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
